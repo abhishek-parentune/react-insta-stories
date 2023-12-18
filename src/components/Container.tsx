@@ -177,16 +177,16 @@ export default function () {
         getVideoDuration={getVideoDuration}
       />
       {!preventDefault && (
-        <div style={styles.overlay}>
+        <div style={styles.overlay} id="tapLeftRight">
           <div
-            style={{ width: "50%", zIndex: 999 }}
+            style={{ width: "50%", zIndex: 100 }}
             onTouchStart={debouncePause}
             onTouchEnd={mouseUp("previous")}
             onMouseDown={debouncePause}
             onMouseUp={mouseUp("previous")}
           />
           <div
-            style={{ width: "50%", zIndex: 999 }}
+            style={{ width: "50%", zIndex: 100 }}
             onTouchStart={debouncePause}
             onTouchEnd={mouseUp("next")}
             onMouseDown={debouncePause}
